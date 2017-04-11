@@ -27,6 +27,17 @@
   div
     float left
 
+[authorship-tooltip]:before
+  position absolute
+  background white
+  border 1px solid black
+
+  content attr(authorship-tooltip)
+  opacity 0
+
+[authorship-tooltip]:hover:before
+  opacity 1
+
 .authorship-loading
   background url('../images/loader.gif') no-repeat 50% white
 

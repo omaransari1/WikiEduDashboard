@@ -97,7 +97,7 @@ const ArticleViewer = React.createClass({
     _.forEach(this.state.users, (user) => {
       // Move spaces inside spans, so that background color is continuous
       html = html.replace(/ (<span class="author-token.*?>)/g, '$1 ');
-      const styledAuthorSpan = `<span title="${user.name}" class="author-token token-authorid-${user.userid} ${this.colors[i]}"`;
+      const styledAuthorSpan = `<span authorship-tooltip="${user.name}" class="author-token token-authorid-${user.userid} ${this.colors[i]}"`;
       const authorSpanMatcher = new RegExp(`<span class="author-token token-authorid-${user.userid}`, 'g');
       html = html.replace(authorSpanMatcher, styledAuthorSpan);
       i += 1;
